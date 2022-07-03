@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="../style-comments.css">
+
+<div id="comment">
+    <div class="commentBlock">
+
+        <form method="get" class="intext">
+            <p>
+                <label for="post" class="labal">Комментарий</label>
+            </p>
+            <input type="text" placeholder="Никнейм" class="nickname" name="login" required>
+            <p>
+                <textarea name="comment" id="comment_field" cols="30" rows="10" class="atext" placeholder="Ваш комментарий"></textarea>
+            </p>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+    {{#each comments}}  
+        <div class="comment">
+            <div class="ava">
+                <img src="../source/men1.png" alt="ava" class="img">
+            </div>
+            <div class="text_comment">
+                <div class="data">
+                    <p class="name">{{name}}</p>
+                    <p class="time" datatime="2021-12-20T14:36-00:00">20/12/2021 15:00</p>
+                    <br>
+                </div>
+
+                <div class="ctext">
+
+                    <p class="cctext"> {{text}}</p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

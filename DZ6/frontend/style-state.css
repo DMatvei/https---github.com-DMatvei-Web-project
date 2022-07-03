@@ -1,0 +1,51 @@
+.textMain {
+    background-color: rgb(255, 0, 0);
+    background-image: url("source/shapelined-_JBKdviweXI-unsplash.jpg");
+    display: block;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    height: 100%;
+    padding-bottom: 1%;
+    margin-top: 10px;
+}
+
+.HeadTitle {
+    margin: 0;
+    text-align: center;
+}
+
+H1 {
+    margin: inherit;
+}
+
+.TextP {
+    display: block;
+    margin: 2%;
+}
+
+p {
+    display: inherit;
+}
+
+.foottext {
+    display: inline-flex;
+    background-color: rgb(196 54 54 / 70%);
+    border: 2px solid rgb(87, 11, 11);
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 5px;
+    margin-left: 10px;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.foottext .author {
+    margin: 0%;
+    font-family: 'Caveat', cursive;
+}
+
+.foottext .time {
+    margin: 0%;
+    font-family: 'Caveat', cursive;
+}

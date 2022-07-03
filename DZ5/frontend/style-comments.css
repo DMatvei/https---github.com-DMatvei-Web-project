@@ -1,0 +1,167 @@
+.comments {
+    background-color: white;
+    background-image: url("source/shapelined-_JBKdviweXI-unsplash.jpg");
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.comment {
+    background-color: rgb(27, 26, 99);
+    background-image: url("source/blue-background.jpg");
+    background-size: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+    z-index: 0;
+    transition: all 0.5s;
+}
+
+.comment:hover {
+    text-shadow: 1px 1px 1px rgb(51, 4, 4);
+    /* box-shadow: 7px 7px 2px rgba(39, 39, 39, 0.726); */
+    transition: all 0.5s;
+    transform: translate(-2px, -2px);
+    transform: perspective(-2px);
+}
+
+.comment::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 254, 254, 0.2);
+    background-image: linear-gradient(rgba(255, 254, 254, 0.904), rgba(255, 254, 254, 0.082));
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px rgba(39, 39, 39, 0.726);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.comment::before:hover {
+    box-shadow: 7px 7px 2px rgba(39, 39, 39, 0.726);
+    transition: all 0.5s;
+}
+
+.ava {
+    display: inline-block;
+    position: relative;
+    margin-left: 3%;
+}
+
+.ava .img {
+    width: 80px;
+    height: 80px;
+    display: inherit;
+    /* margin-left: 3%; */
+}
+
+.text_comment {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 75%;
+    right: 3%;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(252, 196, 196, 0.719);
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.data .name,
+.data .time {
+    display: inline-block;
+    margin: 3px;
+    margin-left: 7px;
+    font-size: 20px;
+    font-family: 'Alumni Sans', sans-serif;
+}
+
+.ctext {
+    display: inline-block;
+    margin: 5px;
+    background-color: rgba(250, 235, 215, 0.897);
+    border: 2px solid black;
+    border-radius: 15px;
+    width: auto;
+}
+
+.ctext .cctext {
+    display: inline-block;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    width: 80%;
+    margin: 5px;
+    margin-left: 7px;
+    width: auto;
+}
+
+.commentBlock {
+    background-color: white;
+    background-image: url("source/shapelined-_JBKdviweXI-unsplash.jpg");
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.intext {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.nickname {
+    background-color: rgba(46, 43, 43, 0.514);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(87, 22, 22);
+    /* border-color: rgb(87, 22, 22); */
+}
+
+.nickname::placeholder {
+    color: rgb(209, 209, 209);
+}
+
+.nickname:focus {
+    border-color: rgb(255, 3, 3);
+    outline: 0px;
+}
+
+.labal {
+    font-size: 28px;
+}
+
+.atext {
+    resize: none;
+    background-color: rgba(46, 43, 43, 0.514);
+    border: 2px solid rgb(87, 22, 22);
+    border-radius: 5px;
+    color: white;
+}
+
+.atext:focus {
+    border-color: rgb(255, 3, 3);
+    outline: 0px;
+}
+
+.atext::placeholder {
+    color: rgb(209, 209, 209);
+}
