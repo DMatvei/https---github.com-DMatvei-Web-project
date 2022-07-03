@@ -78,9 +78,11 @@ app.engine("hbs", expressHbs.engine({
     extname: "hbs"
 }))
 
-app.set("view engine", "hbs");
+app.set("view engine", "hbs")
 
-hbs.registerPartials(__dirname + "/views/partials");
+
+hbs.registerPartials(__dirname + "/views/partials")
+
 
 app.use(express.static(__dirname + "/frontend"))
 
@@ -110,11 +112,16 @@ function rendPost(request, responce) {
 
 let dbClient;
 mongoClient.connect((err, client) => {
+
+
     if (err) return console.log(err);
 
     dbClient = client;
     app.locals.posts = client.db("postsbd").collection("posts");
     app.locals.comments = client.db("commentsbd").collection("comments");
+
+    // app.locals.posts.insertMany(states_, function(err, results) {})
+    // app.locals.comments.insertMany(comments_, function(err, result) {})
 
     app.listen(3000, function() {
         console.log("Сервер ожидает подключения...");
@@ -130,19 +137,20 @@ app.post("/states/:id", urlencodedParser, (req, res) => {
     if (!req.body) return req.sendStatus(400);
 
     let comment = {
-        name: req.body.name,
-        tetx: req.body.comment,
+        name: req.body.login,
+        text: req.body.commentArea,
         id: idFromUser
     }
 
     req.app.locals.comments.insertOne(comment, function(err, result) {
 
         if (err) return console.log(err);
+        // console.log(result)
+        // console.log(comment)
     });
     rendPost(req, res);
 
 });
-
 
 
 app.use("/states/:id", (request, responce) => {
